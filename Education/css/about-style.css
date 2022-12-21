@@ -1,0 +1,104 @@
+.header {
+    height: 60vh;
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/background.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.header .main {
+    height: 40vh;
+}
+
+.header .main .content {
+    color: white;
+    text-align: center;
+    transform: translateY(-15%);
+}
+
+.about {
+    margin: 120px 0 120px 0;
+}
+
+.about .text h2 {
+    font-size: 3rem;
+}
+
+.about .img img {
+    width: 500px;
+}
+
+.about .text .button .btn {
+    color: #F04E32;
+    display: inline-block;
+    border: 1px solid #F04E32;
+    border-radius: 0;
+    padding: 10px 35px;
+    font-size: small;
+    position: relative;
+    margin-left: 25px;
+    text-transform: uppercase;
+}
+
+.about .text .button .btn::before {
+    content: "";
+    border: 1px solid #F04E32;
+    height: 0;
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    left: -25px;
+
+
+}
+
+.about .text .button .btn::after {
+    content: "";
+    border: 1px solid #F04E32;
+    height: 0;
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    left: 130px;
+}
+
+.about .text .button .btn:hover {
+    background-color: #F04E32;
+    border-color: #F04E32;
+    color: white;
+    transition: 1s;
+}
+
+.about .text .button .btn:hover::before {
+    border-color: #F04E32;
+    transition: 0.5s;
+}
+
+.about .text .button .btn:hover::after {
+    border-color: #F04E32;
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 769px) {
+    .about .img img {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .about .text .button .btn {
+        margin-bottom: 20px;
+    }
+
+    .about .img img {
+        width: 98%;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .about {
+        margin-top: 70px;
+    }
+
+    .about .text h2 {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,531 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 100vh;
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/banner.png) center bottom no-repeat;
+    background-size: cover;
+}
+
+/*--------Navbar---------*/
+.navbar {
+    height: 18vh;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-brand img {
+    height: 60px;
+}
+
+.navbar .nav-items {
+    justify-content: end;
+}
+
+.navbar .nav-items ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar .nav-items ul .nav-item .nav-link {
+    text-decoration: none;
+    color: white;
+
+}
+
+.navbar .nav-items ul .nav-item::after {
+    content: '';
+    display: none;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(255, 0, 0);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.navbar .nav-items ul .nav-item:hover::after {
+    width: 100%;
+}
+
+/*-------------Main-------------*/
+.header .main {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .main .content {
+    color: white;
+    text-align: center;
+    transform: translateY(-15%);
+}
+
+.header .main .content .title {
+    margin-bottom: 30px;
+}
+
+.header .main .content .title h1 {
+    font-size: 3.5rem;
+}
+
+.header .main .content .text {
+    display: flex;
+    justify-content: center;
+
+}
+
+.header .main .content .text p {
+    width: 70%;
+    font-size: small;
+}
+
+.header .main .content .button .btn {
+    color: white;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 0;
+    padding: 10px 35px;
+    font-size: small;
+    position: relative;
+
+}
+
+.header .main .content .button .btn::before {
+    content: "";
+    border: 1px solid white;
+    height: 0;
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    left: -25px;
+
+}
+
+.header .main .content .button .btn::after {
+    content: "";
+    border: 1px solid white;
+    height: 0;
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    left: 170px;
+}
+
+.header .main .content .button .btn:hover {
+    background-color: #F04E32;
+    border-color: #F04E32;
+    transition: 1s;
+}
+
+.header .main .content .button .btn:hover::before {
+    border-color: #F04E32;
+    transition: 0.5s;
+}
+
+.header .main .content .button .btn:hover::after {
+    border-color: #F04E32;
+    transition: 0.5s;
+}
+
+/*-------------Courses Section---------*/
+.courses {
+    padding-top: 5rem;
+    text-align: center;
+}
+
+.courses .offered-courses .content {
+    margin-bottom: 40px;
+}
+
+.courses .offered-courses .content .title {
+    margin-bottom: 10px;
+}
+
+.courses .offered-courses .content .title h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+}
+
+.courses .offered-courses .content .text p {
+    font-size: medium;
+    color: dimgray;
+    font-weight: 200;
+}
+
+.courses .offered-courses .course-items {}
+
+.courses .offered-courses .course-items .course {
+    background-color: rgb(255, 243, 243);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.courses .offered-courses .course-items .course:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .4);
+    transition: 0.3s;
+}
+
+.courses .offered-courses .course-items .course h5 {
+    color: black;
+    margin: 20px 0;
+}
+
+.courses .offered-courses .course-items .course p {
+    font-size: medium;
+    color: dimgray;
+    font-weight: 200;
+}
+
+/*--------Our Campus Section--------------*/
+.campus {
+    padding-top: 6rem;
+    text-align: center;
+}
+
+.campus .campus-info .content {
+    margin-bottom: 40px;
+}
+
+.campus .campus-info .content .title {
+    margin-bottom: 10px;
+}
+
+.campus .campus-info .content .title h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+}
+
+.campus .campus-info .content .text p {
+    font-size: medium;
+    color: dimgray;
+    font-weight: 200;
+}
+
+.campus .campus-info .campus-location {}
+
+.campus .campus-info .campus-location .location {
+    background-color: rgb(255, 243, 243);
+    border-radius: 10px;
+    position: relative;
+}
+
+.campus .campus-info .campus-location .location::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-image: linear-gradient(rgba(240, 78, 50, .6), rgba(240, 78, 50, .6));
+    display: none;
+    border-radius: 10px;
+}
+
+.campus .campus-info .campus-location .location:hover::after {
+    display: block;
+    transition: 5s;
+}
+
+.campus .campus-info .campus-location .location:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .4);
+    transition: 0.3s;
+    padding: 0;
+}
+
+.campus .campus-info .campus-location .location:hover p {
+    top: 45%;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.campus .campus-info .campus-location .location img {
+    width: 100%;
+    margin: 0;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.campus .campus-info .campus-location .location p {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    font-size: 2rem;
+    z-index: -1;
+}
+
+/*-------------Our Facilities Section---------------*/
+.facilities {
+    padding-top: 6rem;
+    text-align: center;
+}
+
+.facilities .facilities-info .content {
+    margin-bottom: 40px;
+}
+
+.facilities .facilities-info .content .title {
+    margin-bottom: 10px;
+}
+
+.facilities .facilities-info .content .title h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+}
+
+.facilities .facilities-info .content .text p {
+    font-size: medium;
+    color: dimgray;
+    font-weight: 200;
+}
+
+.facilities .facilities-info .facilities-location {
+    text-align: left;
+}
+
+.facilities .facilities-info .facilities-location .location {
+    border-radius: 10px;
+    position: relative;
+}
+
+.facilities .facilities-info .facilities-location .location img {
+    width: 100%;
+    margin: 0;
+    border-radius: 10px;
+    position: relative;
+}
+
+.facilities .facilities-info .facilities-location .location h5 {
+    color: black;
+    margin: 20px 0;
+}
+
+.facilities .facilities-info .facilities-location .location p {
+    font-size: medium;
+    color: dimgray;
+    font-weight: 200;
+}
+
+/*-----------------Student Says Section----------------------*/
+.student-says {
+    padding-top: 5rem;
+    text-align: center;
+}
+
+.student-says .student-says-info .content {
+    margin-bottom: 20px;
+}
+
+.student-says .student-says-info .content .title {
+    margin-bottom: 10px;
+}
+
+.student-says .student-says-info .content .title h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+}
+
+.student-says .student-says-info .content .text p {
+    font-size: medium;
+    color: dimgray;
+    font-weight: 200;
+}
+
+.student-says .student-says-info .student-says-text .location {
+    background-color: rgb(255, 243, 243);
+    padding: 15px 15px 10px 10px;
+    border-radius: 10px;
+    display: flex;
+    text-align: left;
+}
+
+.student-says .student-says-info .student-says-text .location .img img {
+    width: 50px;
+    border-radius: 50%;
+    margin: 10px 20px 0 20px;
+}
+
+.student-says .student-says-info .student-says-text .location .content h5 {
+    color: black;
+    margin: 20px 0 10px 0;
+}
+
+.student-says .student-says-info .student-says-text .location .content p {
+    font-size: medium;
+    color: dimgray;
+    font-weight: 200;
+}
+
+.student-says .student-says-info .student-says-text .location .content .icons .icon {
+    color: #F04E32;
+}
+
+/*-------------Screen Section-------------*/
+.screen {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.screen .screen-content {
+    height: 350px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/banner2.jpg) center center no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen .screen-content .title {
+    width: 55%;
+    text-align: center;
+}
+
+.screen .screen-content .button .btn {
+    color: white;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 0;
+    padding: 10px 35px;
+    font-size: small;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.screen .screen-content .button .btn::before {
+    content: "";
+    border: 1px solid white;
+    height: 0;
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    left: -25px;
+
+}
+
+.screen .screen-content .button .btn::after {
+    content: "";
+    border: 1px solid white;
+    height: 0;
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    left: 120px;
+}
+
+.screen .screen-content .button .btn:hover {
+    background-color: #F04E32;
+    border-color: #F04E32;
+    transition: 1s;
+}
+
+.screen .screen-content .button .btn:hover::before {
+    border-color: #F04E32;
+    transition: 0.5s;
+}
+
+.screen .screen-content .button .btn:hover::after {
+    border-color: #F04E32;
+    transition: 0.5s;
+}
+
+/*-------Footer Section----------*/
+.footer {
+    text-align: center;
+    height: 200px;
+    margin-top: 100px;
+}
+
+.footer .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .content .text {
+    width: 75%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.footer .content .icons {}
+
+.footer .content .icons .icon {
+    color: #F04E32;
+    margin: 15px;
+}
+
+@media only screen and (max-width: 426px) {
+    .navbar .nav-items ul .nav-item .nav-link {
+        padding-left: 9px;
+    }
+
+    .campus .campus-info .campus-location .location {
+        margin: 20px;
+    }
+
+    .header .main .content .title h1 {
+        font-size: 2.5rem;
+    }
+
+    .courses .offered-courses .course-items .course {
+        margin-bottom: 20px;
+    }
+
+    .student-says .student-says-info .student-says-text .location {
+        margin-bottom: 20px;
+    }
+
+    .courses .offered-courses .content .title h3 {
+        font-size: 2rem;
+    }
+
+    .facilities .facilities-info .content .title h3 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .navbar .nav-items ul .nav-item .nav-link {
+        padding-left: 4px;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .navbar .nav-items ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar .nav-items ul .nav-item .nav-link {
+        padding-left: 4px;
+
+    }
+
+    .navbar .navbar-brand img {
+        height: 50px;
+    }
+
+    .student-says .student-says-info .student-says-text .location {
+        display: block;
+        text-align: center;
+    }
+}
